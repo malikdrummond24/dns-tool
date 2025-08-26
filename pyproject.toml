@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dnswatch"
+version = "0.3.0"
+description = "DNS cache monitor with VirusTotal checks and alerting"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "colorama",
+  "python-dotenv",
+  "requests"
+]
+
+[project.scripts]
+dnswatch = "dnswatch.cli:main"

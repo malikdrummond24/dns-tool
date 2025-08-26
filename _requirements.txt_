@@ -1,0 +1,7 @@
+requests
+python-dotenv
+tabulate
+rich
+sqlite-utils
+
+
