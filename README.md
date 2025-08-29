@@ -1,18 +1,27 @@
-# dnswatch (macOS) — DNS cache monitor with VirusTotal + Alerts
+# dnswatch (macOS) – DNS Cache Monitor with VirusTotal + Alerts
 
-Collect recent DNS lookups from macOS logs, store them in SQLite, check each IP on VirusTotal, and alert via Slack/Discord.
+## 📌 Overview
+`dnswatch` is a Python-based DNS cache monitoring and threat detection tool.  
+It collects DNS lookups from macOS logs, stores them in SQLite, and checks each domain/IP against the VirusTotal API.  
+If malicious activity is detected, alerts can be sent via Slack or Discord in real-time.  
 
-## Quick start
+This project demonstrates applied knowledge of **Python, networking, security, APIs, and automation**. It is designed as a lightweight threat detection tool for educational and research purposes.  
+
+---
+
+## ✨ Features
+- Collects recent DNS lookups on macOS
+- Stores results in **SQLite** for analysis
+- Integrates with **VirusTotal API** to detect malicious domains/IPs
+- Sends alerts via **Slack/Discord webhooks**
+- Supports **manual runs** and **continuous monitoring** with custom intervals
+- Easy to configure via `.env` file  
+
+---
+
+## 🚀 Quick Start
+
+### 1. Clone the repository
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env
-# edit .env: set VT_API_KEY=...
-# optional: SLACK_WEBHOOK_URL / DISCORD_WEBHOOK_URL
-
-# one-off run
-dnswatch once
-
-# continuous run (every 5min)
-dnswatch run --interval 300
+git clone https://github.com/<your-username>/dns-tool.git
+cd dns-tool
